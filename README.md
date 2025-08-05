@@ -22,5 +22,30 @@ pip install selenium pydrive pyautogui
 - Create Google OAuth in Google Cloud Console and download client_secrets.json into your project folder
 
 ## Key Features and Adjustability
+- **Login Wait Time:** The script wait 20 seconds after opening the NetSuite page for manual login
+- **Record Selection:** Uses CSS selectors to identify record links, which can be modified if needed
+- **Screenshot Naming:** Automatically names screenshot as CR#<document_number>.png by extracting the document number from the record page
 
+## How it works
+1. It opens the saved search URL in a browser
+2. Waits for manual login
+3. Finds all record links on the page
+4. Iterates over each record: 
+    4a. Opens a record in a new tab
+    4b. Extracts the document number
+    4c. Takes a screenshot
+    4d. Names the screen shot as CR#<document_number>.png
+    4e. Uploads to Google Drive
+    4f. Closes tab
+    4g. Repeat step 4a with a new record
+
+## Issues
+- Only shows one record at the bottom
+- Only iterates through what is clickable on the first page, if there are records on anoother page, we would need to handle that
+- Zoom out, check if it is at the end of page then takes a screenshot
+    - if there are multiple tabs at the bottom, have it look through each
+
+## In-Progress
+- Click to other record pages if there is more than one page
+- Open tabs on bottom and take a screenshot of each, and name accordingly
 

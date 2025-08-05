@@ -15,8 +15,12 @@ This python script automates taking screenshots of individual Netsuite transacti
 ## Setup & Installation
 - Install Python 3.9+
 - Install required Python packages: 
-'''shell
+```shell
 pip install selenium pydrive pyautogui
-'''
+```
+- Download and place ChromeDriver in your system PATH
+- Create Google OAuth in Google Cloud Console and download client_secrets.json into your project folder
+
+## Key Features and Adjustability
 
 

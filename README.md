@@ -31,13 +31,13 @@ pip install selenium pydrive pyautogui
 2. Waits for manual login
 3. Finds all record links on the page
 4. Iterates over each record: 
-    4a. Opens a record in a new tab
-    4b. Extracts the document number
-    4c. Takes a screenshot
-    4d. Names the screen shot as CR#<document_number>.png
-    4e. Uploads to Google Drive
-    4f. Closes tab
-    4g. Repeat step 4a with a new record
+    1. Opens a record in a new tab
+    2. Extracts the document number
+    3. Takes a screenshot
+    4. Names the screen shot as CR#<document_number>.png
+    5. Uploads to Google Drive
+    6. Closes tab
+    7. Repeat step 4a with a new record
 
 ## Issues
 - Only shows one record at the bottom

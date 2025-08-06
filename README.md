@@ -37,7 +37,7 @@ pip install selenium pydrive pyautogui
     4. Names the screen shot as CR#<document_number>.png
     5. Uploads to Google Drive
     6. Closes tab
-    7. Repeat step 4a with a new record
+    7. Repeat step 1 with a new record
 
 ## Issues
 - Only shows one record at the bottom

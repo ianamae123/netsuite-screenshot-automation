@@ -2,7 +2,10 @@
 
 ## Project Overview
 
-This python script automates taking screenshots of individual Netsuite transaction records from a saved search and uploads them to a Google Drive folder with the document number as its name. It uses Selenium for browser automation, PyDrive for Google Drive API access, and PyAutoGUI for capturing screenshots.
+This python script automates taking screenshots of individual Netsuite transaction records from a saved search and uploads them to a Google Drive folder with the document number as its name. The script uses: 
+    - Selenium for browser automation
+    - PyDrive for Google Drive API access
+    - PyAutoGUI for capturing screenshots.
 
 ## Tools and Technologies Used
 - Python 3.9+
@@ -15,7 +18,7 @@ This python script automates taking screenshots of individual Netsuite transacti
 ## Setup & Installation
 - Install Python 3.9+
 - Install required Python packages: 
-```shell
+```bash
 pip install selenium pydrive pyautogui
 ```
 - Download and place ChromeDriver in your system PATH

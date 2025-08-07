@@ -31,6 +31,7 @@ record_links = driver.find_elements(By.CSS_SELECTOR, "a.dottedlink.viewitem")
 
 # === STEP 5: Loop through each record link ===
 for i, link in enumerate(record_links):
+    document_number = f"unknown_{i+1}"  # in case it fails early
     try:
         href = link.get_attribute('href')
         full_url = href if href.startswith('http') else base_url + href
@@ -44,10 +45,7 @@ for i, link in enumerate(record_links):
             EC.presence_of_all_elements_located((By.CSS_SELECTOR, "span.uir-field.inputreadonly"))
         )
 
-        # Print all fields to identify document number
-        for idx, el in enumerate(elements):
-            print(f"Element {idx}: '{el.text.strip()}'")
-
+        # Getting document number
         document_number = elements[1].text.strip()  # Update index if needed
         print(f"Using document number: {document_number}")
 
@@ -98,7 +96,7 @@ for i, link in enumerate(record_links):
         time.sleep(2)
 
     except Exception as e:
-        print(f"Error with record {i+1}: {e}")
+        print(f"Error with document number {document_number}: {e}")
 
 # === STEP 8: Done! Quit browser ===
 driver.quit()
